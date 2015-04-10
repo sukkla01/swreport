@@ -6,7 +6,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'language'=>'th',
+    'language' => 'th',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -15,10 +15,10 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        /*'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-        ],*/
+        /* 'user' => [
+          'identityClass' => 'app\models\User',
+          'enableAutoLogin' => true,
+          ], */
         'user' => [
             'class' => 'amnah\yii2\user\components\User',
         ],
@@ -44,6 +44,10 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
+        ],
+        'urlManager' => [
+           'enablePrettyUrl' => true,
+            'showScriptName' => false,
         ]
     ],
     'as access' => [
@@ -57,26 +61,27 @@ $config = [
             'gridview/*',
             'contact/*',
             'base/*',
-            'map/*'
+            'map/*',
+            'upload/*'
         ]
     ],
     'modules' => [
         'user' => [
             'class' => 'amnah\yii2\user\Module',
-            // set custom module properties here ...
+        // set custom module properties here ...
         ],
         'admin' => [
             'class' => 'mdm\admin\Module',
             //'layout' => 'left-menu', 
             'controllerMap' => [
-                 'assignment' => [
+                'assignment' => [
                     'class' => 'mdm\admin\controllers\AssignmentController',
                     'userClassName' => 'amnah\yii2\user\models\User',
                     'idField' => 'id', // id field of model User
                 ]
             ],
         ],
-        'gridview' =>  [
+        'gridview' => [
             'class' => '\kartik\grid\Module'
         ],
         'report' => [
