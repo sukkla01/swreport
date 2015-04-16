@@ -32,11 +32,11 @@ use yii\jui\DatePicker;
 
     <?= $form->field($model, 'takon')->textInput() ?>
 
-    <?= $form->field($model, 'pump')->dropDownList([ 'สูบ' => 'สูบ', 'ไม่สูบ' => 'ไม่สูบ', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'pump')->dropDownList([ 'สูบ' => 'สูบ', 'ไม่สูบ' => 'ไม่สูบ', ], ['prompt' => '-กรุณาเลือก-']) ?>
 
     <?= $form->field($model, 'chlorine')->textInput() ?>
 
-    <?= $form->field($model, 'pump_chlorine')->dropDownList([ 'เติม' => 'เติม', 'ไม่เติม' => 'ไม่เติม', ], ['prompt' => '']) ?>
+    <?= $form->field($model, 'pump_chlorine')->dropDownList([ 'เติม' => 'เติม', 'ไม่เติม' => 'ไม่เติม', ], ['prompt' => '-กรุณาเลือก-']) ?>
 
     <?= $form->field($model, 'count_chlorine')->textInput() ?>
 
