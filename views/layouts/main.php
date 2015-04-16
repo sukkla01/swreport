@@ -30,7 +30,7 @@ material\MaterialAsset::register($this);
         <div class="wrap">
             <?php
             NavBar::begin([
-                'brandLabel' => 'ระบบบริหารทั่วไป',
+                'brandLabel' => 'ระบบรายงานทั่วไป',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-success navbar-fixed-top',
